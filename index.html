@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+ 
     <link rel="stylesheet" href="style.css">
     <title>Etch-a-Sketch</title>
 </head>
@@ -12,10 +12,24 @@
         <div class="title">
             <h1>Etch-a-Sketch</h1>
         </div>
+        <div class="mode">Mode: Drawing</div>
         <div class="content">
             <div class="board"></div>
+            <div class="buttons">
+                <button class="erasorButton" onclick="changeColor('white')">Erasor</button>
+                <button class="blackButton" onclick="changeColor('black')">Black</button>
+                <button class="grayButton" onclick="changeColor('gray')">Gray</button>
+                <button class="randomButton" onclick="changeColor('random')">Random</button>
+                <button class="resetButton" onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of board" value="16" onchange="changeSize(this.value)">
+                <button>Set size</button>
+            </div>
+            <div class="error">
+            </div>
         </div>
     </div>
-
+    <script src="main.js"></script>
 </body>
 </html>
